@@ -22,8 +22,7 @@ selected_x_var = st.selectbox('What do you want the variable x to be?',['bill_le
 selected_y_var = st.selectbox('What would you like the variable y to be?',['bill_length_mm','bill_depth_mm','flipper_length_mm','body_mass_g'])
 
 #Create the scatter plot from the dataframe and the variables
-
-penguins_df = penguins_df[penguins_df['species'] == [selected_species]]
+penguins_df = penguins_df[penguins_df['species'] == selected_species]
 
 fig, ax = plt.subplots()
 ax = sns.scatterplot(x = penguins_df[selected_x_var], y = penguins_df[selected_y_var])
