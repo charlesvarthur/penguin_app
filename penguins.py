@@ -26,6 +26,7 @@ penguins_df = penguins_df[penguins_df['species'] == selected_species]
 
 fig, ax = plt.subplots()
 ax = sns.scatterplot(x = penguins_df[selected_x_var], y = penguins_df[selected_y_var])
+plt.tite(selected_species)
 plt.xlabel(selected_x_var)
 plt.ylabel(selected_y_var)
 st.pyplot(fig)
