@@ -24,7 +24,7 @@ selected_y_var = st.selectbox('What would you like the variable y to be?',['bill
 #Create the scatter plot from the dataframe and the variables
 penguins_df = penguins_df[penguins_df['species'] == selected_species]
 
-sns.set_style("darkgrid")
+sns.set_theme(style = "darkgrid", palette=None)
 markers = {"Adelie" : 'X', "Gentoo": 's', "Chinstrap":'o'}
 fig, ax = plt.subplots()
 ax = sns.scatterplot(data = penguins_df, x = selected_x_var, y = selected_y_var, hue ='species', markers = markers, style ='species')
