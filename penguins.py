@@ -13,7 +13,7 @@ st.title("Palmers Penguins")
 penguins_df = pd.read_csv('https://raw.githubusercontent.com/charlesvarthur/Streamlit-for-Data-Science/main/penguin_app/penguins.csv')
 st.write(penguins_df.head())
 
-#Opening paragraph
+#Opening paragraph   s
 st.markdown('Use this Streamlit app to make your own scatterplot about penguins!')
 
 #Create user input variables for the species and characteristics
