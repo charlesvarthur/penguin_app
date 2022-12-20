@@ -27,7 +27,7 @@ penguins_df = penguins_df[penguins_df['species'] == selected_species]
 sns.set_style=('darkgrid')
 markers = {"Adelie" : 'X', "Gentoo": 's', "Chinstrap":'o'}
 fig, ax = plt.subplots()
-ax = sns.scatterplot(x = penguins_df[selected_x_var], y = penguins_df[selected_y_var])
+ax = sns.scatterplot(x = penguins_df[selected_x_var], y = penguins_df[selected_y_var],hue ='species',markers = markers)
 plt.title('Characteristics of the {} penguin'.format(selected_species))
 plt.xlabel(selected_x_var)
 plt.ylabel(selected_y_var)
