@@ -30,9 +30,9 @@ selected_y_var = st.selectbox('What would you like the variable y to be?',['bill
 #User input for gender of the penguin
 select_gender= st.selectbox('Which Gender would you like to analyse?' ['male','female','all genders'])
 if select_gender == 'male':
-    penguins_dg = penguins_df[penguins_df['sex'] == 'male']
+    penguins_df = penguins_df[penguins_df['sex'] == 'male']
 elif select_gender == 'female':
-    penguins_dg = penguins_df[penguins_df['sex'] == 'female']
+    penguins_df = penguins_df[penguins_df['sex'] == 'female']
 else:
     pass
 
