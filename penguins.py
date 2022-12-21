@@ -14,8 +14,8 @@ penguin_file = st.file_uploader('Select your local penguins CSV (default provide
 if penguin_file is not None:
     penguins_df=pd.read.csv(penguin_file)
 else:
-    st.stop()
-    #penguins_df = pd.read_csv('https://raw.githubusercontent.com/charlesvarthur/Streamlit-for-Data-Science/main/penguin_app/penguins.csv')
+    #st.stop()
+    penguins_df = pd.read_csv('https://raw.githubusercontent.com/charlesvarthur/Streamlit-for-Data-Science/main/penguin_app/penguins.csv')
 
 #st.write(penguins_df.head())
 
@@ -26,6 +26,15 @@ st.markdown('Use this Streamlit app to make your own scatterplot about penguins!
 #selected_species = st.selectbox('What species would you like to visualise?', ['Adelie', 'Gentoo', 'Chinstrap'])
 selected_x_var = st.selectbox('What do you want the variable x to be?',['bill_length_mm','bill_depth_mm','flipper_length_mm','body_mass_g'])
 selected_y_var = st.selectbox('What would you like the variable y to be?',['bill_length_mm','bill_depth_mm','flipper_length_mm','body_mass_g'])
+
+#User input for gender of the penguin
+select_gender= st.selectbox('Which Gender would you like to analyse?' ['male','female','all genders'])
+if select_gender == 'male':
+    penguins_dg = penguins_df[penguins_df['sex'] == 'male']
+elif select_gender == 'female':
+    penguins_dg = penguins_df[penguins_df['sex'] == 'female']
+else:
+    pass
 
 #Create the scatter plot from the dataframe and the variables
 #penguins_df = penguins_df[penguins_df['species'] == selected_species]
