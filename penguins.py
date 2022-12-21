@@ -14,7 +14,9 @@ penguin_file = st.file_uploader('Select your local penguins CSV (default provide
 if penguin_file is not None:
     penguins_df=pd.read.csv(penguin_file)
 else:
-    penguins_df = pd.read_csv('https://raw.githubusercontent.com/charlesvarthur/Streamlit-for-Data-Science/main/penguin_app/penguins.csv')
+    st.stop()
+    #penguins_df = pd.read_csv('https://raw.githubusercontent.com/charlesvarthur/Streamlit-for-Data-Science/main/penguin_app/penguins.csv')
+
 #st.write(penguins_df.head())
 
 #Opening paragraph   s
