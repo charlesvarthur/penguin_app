@@ -47,4 +47,4 @@ ax = sns.scatterplot(data = penguins_df, x = selected_x_var, y = selected_y_var,
 plt.title('Characteristics of penguins')#.format(selected_species))
 plt.xlabel(selected_x_var)
 plt.ylabel(selected_y_var)
-st.pyplot(fig)
+st.pyplot(fig)  
