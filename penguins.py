@@ -28,7 +28,7 @@ selected_x_var = st.selectbox('What do you want the variable x to be?',['bill_le
 selected_y_var = st.selectbox('What would you like the variable y to be?',['bill_length_mm','bill_depth_mm','flipper_length_mm','body_mass_g'])
 
 #User input for gender of the penguin
-select_gender= st.selectbox('Which Gender would you like to analyse?', ['male','female','all genders'])
+select_gender= st.selectbox('Which Gender would you like to analyse?', ['all genders','male','female'])
 if select_gender == 'male':
     penguins_df = penguins_df[penguins_df['sex'] == 'male']
 elif select_gender == 'female':
